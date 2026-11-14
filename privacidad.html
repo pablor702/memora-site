@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memora · Política de privacidad</title>
+<meta name="description" content="Qué datos guarda Memora, a dónde van y cómo borrarlos.">
+<style>
+  :root {
+    --bg: #f4f4fb; --card: #ffffff; --text: #1b1c26; --muted: #4f5163;
+    --accent: #5b4fb3; --line: #dcdcea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161826; --card: #1f2133; --text: #ececf4; --muted: #b3b4c6;
+      --accent: #b9b1f3; --line: #34364a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; }
+  p, li { color: var(--text); }
+  .fecha { color: var(--muted); margin: 0 0 24px; }
+  .resumen {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 4px 20px;
+  }
+  a { color: var(--accent); }
+  code { font-size: .9em; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; }
+  @media (max-width: 520px) {
+    table, tbody, tr, td { display: block; }
+    thead { display: none; }
+    tr { padding: 8px 0; border-bottom: 1px solid var(--line); }
+    td { border: 0; padding: 2px 0; }
+  }
+  footer { margin-top: 48px; color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Política de privacidad de Memora</h1>
+<p class="fecha">Vigente desde el 13 de noviembre de 2026.</p>
+
+<div class="resumen">
+<p><strong>En pocas palabras:</strong> Memora guarda tus recordatorios en tu teléfono. No tiene servidores, cuentas propias, publicidad ni analítica: quien la desarrolla no recibe ningún dato tuyo. Si conectás Google Drive, la copia de seguridad va a tu propio Drive, a una carpeta que solo ve Memora.</p>
+</div>
+
+<h2>Qué guarda Memora en tu teléfono</h2>
+<ul>
+  <li>Tus recordatorios: título, nota, fecha, hora, repetición, avisos y categoría.</li>
+  <li>Los cumpleaños y aniversarios que cargues: el nombre, la fecha y, si lo ponés, el año.</li>
+  <li>Qué avisos marcaste como hechos u omitidos, y los nombres que les diste a las categorías.</li>
+  <li>Tus ajustes: apariencia, cuánto se pospone un aviso, la copia diaria y, si conectaste Drive, la cuenta y la fecha de la última copia.</li>
+</ul>
+<p>Todo queda en el almacenamiento privado de la app. Memora no lee tus contactos, tu calendario, tus archivos ni tu ubicación.</p>
+
+<h2>Copia en Google Drive (opcional)</h2>
+<p>Si conectás tu cuenta de Google en Ajustes, Memora sube un archivo con todo lo de arriba (menos los ajustes) a la <strong>carpeta privada de la app en tu propio Google Drive</strong>. Esa carpeta no aparece entre tus archivos y otras apps no pueden leerla. Memora pide solo ese permiso (<code>drive.appdata</code>): no puede ver ni tocar el resto de tu Drive.</p>
+<ul>
+  <li>Memora guarda las últimas 5 copias y borra las más viejas.</li>
+  <li>El archivo viaja cifrado (HTTPS) directo entre tu teléfono y Google. No pasa por ningún servidor de Memora.</li>
+  <li>Memora lee el email de tu cuenta de Google solo para mostrarte cuál está conectada. Queda en tu teléfono.</li>
+  <li>Lo que se guarda en Drive también se rige por la <a href="https://policies.google.com/privacy?hl=es-419">política de privacidad de Google</a>.</li>
+</ul>
+<p>El uso que hace Memora de la información que recibe de las API de Google cumple con la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos del Usuario de los Servicios de API de Google</a>, incluidos los requisitos de Uso Limitado.</p>
+
+<h2>Copia de seguridad de Android</h2>
+<p>Si tenés activada la copia de seguridad de Android, el sistema puede copiar los datos de Memora (recordatorios y ajustes) a tu cuenta de Google, como hace con otras apps, para recuperarlos en un teléfono nuevo. La maneja Android, no Memora, y la podés apagar en la configuración del teléfono.</p>
+
+<h2>Exportar a un archivo</h2>
+<p>Si exportás tus recordatorios, el archivo se guarda donde elijas. Memora no lo manda a ningún lado.</p>
+
+<h2>Permisos que usa</h2>
+<table>
+<thead><tr><th>Permiso</th><th>Para qué</th></tr></thead>
+<tbody>
+<tr><td>Alarmas y recordatorios <code>SCHEDULE_EXACT_ALARM</code></td><td>Que cada aviso suene a la hora exacta. Lo das vos en la configuración del sistema y lo podés quitar.</td></tr>
+<tr><td>Notificaciones <code>POST_NOTIFICATIONS</code></td><td>Mostrar los avisos.</td></tr>
+<tr><td>Iniciar al encender <code>RECEIVE_BOOT_COMPLETED</code></td><td>Volver a programar los avisos después de reiniciar el teléfono.</td></tr>
+<tr><td>Internet <code>INTERNET</code></td><td>Solo para la copia en Google Drive.</td></tr>
+<tr><td>Estado de la red <code>ACCESS_NETWORK_STATE</code></td><td>Esperar a tener conexión antes de hacer la copia diaria.</td></tr>
+<tr><td>Mantener activo <code>WAKE_LOCK</code></td><td>Terminar la copia diaria aunque la pantalla esté apagada.</td></tr>
+</tbody>
+</table>
+
+<h2>Con quién se comparte</h2>
+<p>Con nadie. Memora no vende, presta ni comparte tus datos, y no incluye publicidad, analítica ni informes automáticos de errores.</p>
+
+<h2>Cómo borrar tus datos</h2>
+<ul>
+  <li><strong>En el teléfono:</strong> desinstalar Memora, o borrar sus datos desde la configuración de apps, elimina todo.</li>
+  <li><strong>En Google Drive:</strong> desconectar Drive en Ajustes deja tus copias donde están, por si las querés recuperar. Para borrarlas, entrá a <a href="https://drive.google.com">drive.google.com</a> desde una computadora, abrí Configuración › Administrar apps, buscá Memora y elegí Opciones › Borrar datos ocultos de la app.</li>
+  <li><strong>Copia de Android:</strong> se borra desde la configuración de copia de seguridad de tu cuenta de Google.</li>
+</ul>
+
+<h2>Menores</h2>
+<p>Memora no está dirigida a menores de 13 años.</p>
+
+<h2>Cambios</h2>
+<p>Si esta política cambia, la nueva versión se publica en esta página con su fecha.</p>
+
+<h2>Contacto</h2>
+<p>Por cualquier consulta sobre tus datos: <a href="mailto:pablor70@gmail.com">pablor70@gmail.com</a>.</p>
+
+<footer><a href="./">Memora</a></footer>
+</main>
+</body>
+</html>
